@@ -47,8 +47,12 @@ export default function Hero() {
           className={styles.photoImg}
         />
       </div>
-      {highlights.map((item) => (
-        <div key={item.label} className={styles.tile}>
+      {highlights.map((item, index) => (
+        <div
+          key={item.label}
+          className={styles.tile}
+          style={{ animationDelay: `${0.2 + index * 0.08}s` }}
+        >
           <span className={styles.label}>{item.label}</span>
           <span className={item.big ? styles.bigValue : styles.value}>
             {item.value}

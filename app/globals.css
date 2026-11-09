@@ -6,6 +6,10 @@
   --heading: #0f172a;
   --muted: #57534e;
   --primary: #1e3a8a;
+  --text-on-dark: #cbd5e1;
+  --border-on-dark: #334155;
+  --success: #16a34a;
+  --nav-link: #44403c;
 }
 
 * {
@@ -31,4 +35,14 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
