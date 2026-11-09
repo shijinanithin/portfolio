@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -23,6 +24,16 @@ export default function Hero() {
             Download CV
           </a>
         </div>
+      </div>
+      <div className={styles.photo}>
+        <Image
+          src="/shijina.jpeg"
+          alt="Portrait of Shijina Nithin"
+          fill
+          priority
+          sizes="(max-width: 900px) 50vw, 25vw"
+          className={styles.photoImg}
+        />
       </div>
     </section>
   );

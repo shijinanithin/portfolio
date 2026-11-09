@@ -76,6 +76,20 @@
     color: #fff;
 }
 
+.photo {
+    grid-row: span 2;
+    position: relative;
+    min-height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+}
+
+.photoImg {
+    object-fit: cover;
+    object-position: center 18%;
+}
+
 @media (max-width: 900px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
