@@ -1,7 +1,9 @@
+import Hero from "./components/Hero";
+
 export default function Home() {
   return (
-    <main>
-      <h1>Hi, I'm Shijina.</h1>
+    <main className="container">
+      <Hero />
     </main>
   );
 }
