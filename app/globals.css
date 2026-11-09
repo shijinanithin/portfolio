@@ -8,9 +8,14 @@
   --primary: #1e3a8a;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
 
 body {
   margin: 0;
@@ -18,4 +23,12 @@ body {
   color: var(--text);
 }
 
-a { color: var(--primary); }
+a {
+  color: var(--primary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
