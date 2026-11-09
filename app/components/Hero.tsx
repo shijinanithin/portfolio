@@ -1,6 +1,18 @@
 import styles from "./Hero.module.css";
 import Image from "next/image";
 
+const highlights = [
+  {
+    label: "Web apps delivered",
+    value: "20+",
+    note: "as Project Manager at 4SPOTS",
+    big: true,
+  },
+  { label: "Frontend", value: "React · Next.js · TypeScript" },
+  { label: "Backend", value: "Django · Flask · PostgreSQL" },
+  { label: "Leadership", value: "Team lead on a live CRM project" },
+];
+
 export default function Hero() {
   return (
     <section id="top" className={styles.grid}>
@@ -35,6 +47,15 @@ export default function Hero() {
           className={styles.photoImg}
         />
       </div>
+      {highlights.map((item) => (
+        <div key={item.label} className={styles.tile}>
+          <span className={styles.label}>{item.label}</span>
+          <span className={item.big ? styles.bigValue : styles.value}>
+            {item.value}
+          </span>
+          {item.note && <span className={styles.note}>{item.note}</span>}
+        </div>
+      ))}
     </section>
   );
 }

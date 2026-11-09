@@ -90,6 +90,44 @@
     object-position: center 18%;
 }
 
+.tile {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.value {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--heading);
+}
+
+.bigValue {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--heading);
+}
+
+.note {
+    font-size: 14px;
+    color: var(--muted);
+}
+
 @media (max-width: 900px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
