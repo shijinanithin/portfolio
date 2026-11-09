@@ -1,5 +1,6 @@
 import { projects } from "../data/projects";
 import styles from "./Projects.module.css";
+import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
@@ -8,11 +9,15 @@ export default function Projects() {
         <p className={styles.eyebrow}>Selected work</p>
         <h2 className={styles.title}>Projects</h2>
       </div>
-      <ul>
-        {projects.map((project) => (
-          <li key={project.title}>{project.title}</li>
+      <div className={styles.grid}>
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={project.title}
+            project={project}
+            number={index + 1}
+          />
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
