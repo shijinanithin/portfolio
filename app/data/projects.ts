@@ -8,6 +8,7 @@ export type Project = {
   tags: string[];
   demoUrl?: string;
   codeUrl?: string;
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -52,3 +53,27 @@ export const projects: Project[] = [
     tags: ["React", "Redux Toolkit"],
   },
 ];
+export type FeaturedProject = Project & {
+  role: string;
+  team: string;
+  status: string;
+  highlights: string[];
+};
+
+export const featuredProject: FeaturedProject = {
+  title: "CRM Web Application",
+  label: "Featured · Live company project",
+  category: "frontend",
+  description:
+    "A CRM that helps a sales team track leads, companies, deals and support tickets in one place.",
+  tags: ["React", "TypeScript", "Material UI", "React Context"],
+  role: "Team lead",
+  team: "5 developers",
+  status: "Frontend complete",
+  highlights: [
+    "Leads, companies, deals and tickets modules",
+    "Sales dashboard with charts and team performance",
+    "Set up the project, reviewed merge requests and planned tasks",
+    "Django, PostgreSQL and JWT backend in progress",
+  ],
+};
