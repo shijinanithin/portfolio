@@ -11,6 +11,9 @@
   --success: #16a34a;
   --nav-link: #44403c;
   --border-strong: #d6d3d1;
+  --input-on-dark: #1e293b;
+  --success-on-dark: #86efac;
+  --error-on-dark: #fca5a5;
 }
 
 * {
