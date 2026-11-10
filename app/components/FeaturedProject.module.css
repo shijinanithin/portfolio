@@ -12,7 +12,7 @@
 .preview {
     flex: 1 1 440px;
     position: relative;
-    min-height: 300px;
+    aspect-ratio: 7 / 3;
     border-radius: 14px;
     overflow: hidden;
     background: var(--bg);

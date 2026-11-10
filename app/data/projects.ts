@@ -53,6 +53,7 @@ export const projects: Project[] = [
     tags: ["React", "Redux Toolkit"],
   },
 ];
+
 export type FeaturedProject = Project & {
   role: string;
   team: string;
@@ -74,6 +75,7 @@ export const featuredProject: FeaturedProject = {
     "Leads, companies, deals and tickets modules",
     "Sales dashboard with charts and team performance",
     "Set up the project, reviewed merge requests and planned tasks",
-    "Django, PostgreSQL and JWT backend in progress",
+    "Production-ready frontend built to connect to a Django, PostgreSQL and JWT backend",
   ],
+  image: "/projects/crm.webp",
 };
