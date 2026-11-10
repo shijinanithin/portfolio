@@ -4,6 +4,7 @@ import { useState } from "react";
 import { projects, type Category } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import styles from "./ProjectGrid.module.css";
+import Reveal from "./Reveal";
 
 type Filter = "all" | Category;
 
@@ -41,12 +42,13 @@ export default function ProjectGrid() {
       </div>
 
       <div className={styles.grid}>
-        {visibleProjects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            project={project}
-            number={projects.indexOf(project) + 1}
-          />
+        {visibleProjects.map((project, index) => (
+          <Reveal key={project.title} delay={index * 0.08}>
+            <ProjectCard
+              project={project}
+              number={projects.indexOf(project) + 1}
+            />
+          </Reveal>
         ))}
       </div>
     </>
