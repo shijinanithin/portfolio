@@ -1,5 +1,6 @@
 import type { Project } from "../data/projects";
 import styles from "./ProjectCard.module.css";
+import TagList from "./TagList";
 
 type Props = {
   project: Project;
@@ -15,13 +16,7 @@ export default function ProjectCard({ project, number }: Props) {
       </div>
       <h3 className={styles.title}>{project.title}</h3>
       <p className={styles.description}>{project.description}</p>
-      <ul className={styles.tags}>
-        {project.tags.map((tag) => (
-          <li key={tag} className={styles.tag}>
-            {tag}
-          </li>
-        ))}
-      </ul>
+      <TagList tags={project.tags} />
       {(project.demoUrl || project.codeUrl) && (
         <div className={styles.links}>
           {project.demoUrl && (
