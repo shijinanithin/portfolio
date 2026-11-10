@@ -1,0 +1,25 @@
+.section {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.text p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
