@@ -4,7 +4,18 @@ import { useState, type FormEvent } from "react";
 import styles from "./Contact.module.css";
 
 type Status = "idle" | "sending" | "success" | "error";
-
+const links = [
+  {
+    label: "LinkedIn",
+    note: "Experience and professional profile",
+    href: "https://www.linkedin.com/in/shijinanithin",
+  },
+  {
+    label: "GitHub",
+    note: "Source code for my projects",
+    href: "https://github.com/shijinanithin",
+  },
+];
 export default function Contact() {
   const [status, setStatus] = useState<Status>("idle");
 
@@ -97,6 +108,42 @@ export default function Contact() {
             </p>
           )}
         </form>
+      </div>
+      <div className={styles.side}>
+        <div className={styles.card}>
+          <p className={styles.cardLabel}>Other ways to connect</p>
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.row}
+            >
+              <span className={styles.rowText}>
+                <span className={styles.rowTitle}>{link.label}</span>
+                <span className={styles.rowNote}>{link.note}</span>
+              </span>
+              <span className={styles.arrow} aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          ))}
+        </div>
+
+        <a
+          href="/cv.pdf"
+          download
+          className={`${styles.card} ${styles.cvCard}`}
+        >
+          <span className={styles.rowText}>
+            <span className={styles.rowTitle}>Download CV</span>
+            <span className={styles.rowNote}>PDF · one page</span>
+          </span>
+          <span className={styles.arrow} aria-hidden="true">
+            →
+          </span>
+        </a>
       </div>
     </section>
   );
