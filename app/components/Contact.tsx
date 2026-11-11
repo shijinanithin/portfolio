@@ -142,7 +142,7 @@ export default function Contact() {
 
           <a
             href="/cv.pdf"
-            download
+            download="Shijina_Nithin_CV.pdf"
             className={`${styles.card} ${styles.cvCard}`}
           >
             <span className={styles.rowText}>

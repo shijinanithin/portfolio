@@ -1,5 +1,5 @@
-import styles from "./Hero.module.css";
 import Image from "next/image";
+import styles from "./Hero.module.css";
 
 const highlights = [
   {
@@ -32,11 +32,16 @@ export default function Hero() {
           <a href="#work" className={styles.primary}>
             View my work
           </a>
-          <a href="/cv.pdf" className={styles.secondary}>
+          <a
+            href="/cv.pdf"
+            download="Shijina_Nithin_CV.pdf"
+            className={styles.secondary}
+          >
             Download CV
           </a>
         </div>
       </div>
+
       <div className={styles.photo}>
         <Image
           src="/shijina.webp"
@@ -47,6 +52,7 @@ export default function Hero() {
           className={styles.photoImg}
         />
       </div>
+
       {highlights.map((item, index) => (
         <div
           key={item.label}
