@@ -39,7 +39,7 @@ export default function Hero() {
       </div>
       <div className={styles.photo}>
         <Image
-          src="/shijina.jpeg"
+          src="/shijina.webp"
           alt="Portrait of Shijina Nithin"
           fill
           priority
